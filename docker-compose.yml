@@ -1,0 +1,70 @@
+# Beelink EQi12 home server stack
+# Tested on Intel Core i3-1215U, Windows 11 + Docker Desktop (WSL2 backend)
+# Reference build: https://homelabtoolkit.com/build/docker-compose-home-server-stack/
+
+services:
+  nginx:
+    image: nginx:1.27-alpine
+    restart: unless-stopped
+    ports:
+      - "8080:80"
+    environment:
+      TZ: Asia/Shanghai
+    volumes:
+      - ./nginx/conf.d:/etc/nginx/conf.d:ro
+    healthcheck:
+      test: ["CMD", "wget", "-q", "--spider", "http://127.0.0.1/"]
+      interval: 30s
+      timeout: 5s
+      retries: 3
+
+  postgres:
+    image: postgres:17-alpine
+    restart: unless-stopped
+    environment:
+      POSTGRES_USER: app
+      POSTGRES_PASSWORD: ${POSTGRES_PASSWORD:?set POSTGRES_PASSWORD in .env}
+      POSTGRES_DB: app
+      TZ: Asia/Shanghai
+    volumes:
+      - postgres-data:/var/lib/postgresql/data
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U app -d app"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+
+  redis:
+    image: redis:8-alpine
+    restart: unless-stopped
+    command: ["redis-server", "--appendonly", "yes", "--requirepass", "${REDIS_PASSWORD:?set REDIS_PASSWORD in .env}"]
+    environment:
+      TZ: Asia/Shanghai
+    volumes:
+      - redis-data:/data
+    healthcheck:
+      test: ["CMD", "redis-cli", "-a", "${REDIS_PASSWORD}", "ping"]
+      interval: 15s
+      timeout: 5s
+      retries: 5
+
+  jellyfin:
+    image: jellyfin/jellyfin:10
+    restart: unless-stopped
+    ports:
+      - "8096:8096"
+    environment:
+      TZ: Asia/Shanghai
+    volumes:
+      - jellyfin-config:/config
+      - jellyfin-cache:/cache
+      - ./media:/media:ro
+    # Intel QSV hardware transcoding (verify on your hardware):
+    # devices:
+    #   - /dev/dri:/dev/dri
+
+volumes:
+  postgres-data:
+  redis-data:
+  jellyfin-config:
+  jellyfin-cache:
