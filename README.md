@@ -2,6 +2,8 @@
 
 A tested Docker Compose stack for running a home server on a mini PC (Beelink EQi12, Intel Core i3-1215U). Includes nginx, PostgreSQL 17, Redis 8 and Jellyfin with sensible defaults, health checks and persistent volumes.
 
+> 📊 **Looking for the raw data behind these claims?** See [eqi12-measurement-data](https://github.com/sohasteve-pixel/eqi12-measurement-data) — the open power / codec / storage / network measurement logs this stack was validated against.
+
 ## What's included
 
 | Service | Image | Port | Purpose |
