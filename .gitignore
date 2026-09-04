@@ -1,5 +1,10 @@
 .env
 *.log
 .DS_Store
+NUL
+nul
+*.key
+*.pem
+id_ed25519*
 __pycache__/
 node_modules/

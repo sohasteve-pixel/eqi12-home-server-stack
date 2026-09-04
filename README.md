@@ -32,6 +32,18 @@ This is not a generic example. It is the stack actually running on a measured [B
 - **Recovery:** verified 5/5 normal-restart cycles, 5/5 shutdown WOL cycles and 3/3 AC-loss recovery cycles. See the [Docker auto-start guide](https://homelabtoolkit.com/build/docker-desktop-auto-start-home-server/).
 - **Media:** Jellyfin with Intel Quick Sync hardware transcoding verified at ~13W for two simultaneous 4K-to-1080p streams. See the [Jellyfin Intel QSV setup guide](https://homelabtoolkit.com/build/jellyfin-intel-qsv-windows/) and the [QSV codec matrix](https://homelabtoolkit.com/lab/intel-i3-1215u-qsv-codec-support/).
 
+## Backing the stack up
+
+Docker does not back up your volumes. Export each service with its own tool and restore-test the result, rather than copying `/var/lib/docker/volumes` while the stack is running:
+
+```bash
+docker compose exec -T database pg_dump -U app app > backup-postgres-$(date +%Y%m%d).sql
+docker compose exec -T cache redis-cli -n 0 BGSAVE
+docker compose cp cache:/data/dump.rdb ./backup-redis-$(date +%Y%m%d).rdb
+```
+
+Measured on this stack: nginx returns to healthy in 0.660 s, PostgreSQL in 0.833 s and Redis in 2.042 s after a container restart, with persistent data intact. The full drill, exact commands and raw evidence are in the [Docker Compose backup and restore drill](https://homelabtoolkit.com/build/docker-compose-backup-restore-drill/).
+
 ## Notes
 
 - `restart: unless-stopped` is set on every service so the stack returns after a host reboot.
