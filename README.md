@@ -42,7 +42,18 @@ docker compose exec -T cache redis-cli -n 0 BGSAVE
 docker compose cp cache:/data/dump.rdb ./backup-redis-$(date +%Y%m%d).rdb
 ```
 
-Measured on this stack: nginx returns to healthy in 0.660 s, PostgreSQL in 0.833 s and Redis in 2.042 s after a container restart, with persistent data intact. The full drill, exact commands and raw evidence are in the [Docker Compose backup and restore drill](https://homelabtoolkit.com/build/docker-compose-backup-restore-drill/).
+Measured on this stack: nginx returns to healthy in 0.660 s, PostgreSQL in 0.833 s and Redis in 2.042 s after a container restart, with persistent data intact. The full drill, exact commands and raw evidence are in the [Docker Compose backup and restore drill](https://homelabtoolkit.com/build/docker-compose-backup-restore-drill/). To work out how many generations to keep and how much disk they cost, use the [backup retention planner](https://homelabtoolkit.com/tools/backup-retention-planner/).
+
+## Related reading
+
+If you are deciding what to run on this class of hardware before committing to a stack:
+
+- [Windows mini PC home server roadmap](https://homelabtoolkit.com/build/windows-mini-pc-home-server-roadmap/) — the end-to-end path from bare metal to a running server.
+- [Docker on Windows vs Proxmox on the same mini PC](https://homelabtoolkit.com/compare/windows-docker-vs-proxmox-same-mini-pc/) — measured trade-offs, not opinion.
+- [Proxmox on a mini PC](https://homelabtoolkit.com/build/proxmox-on-mini-pc-eqi12/) — the alternative hypervisor route.
+- [Mini PC home server buying guide](https://homelabtoolkit.com/build/mini-pc-home-server-buying-guide/) — ports, NICs and NVMe choices that actually matter.
+- [NAS vs mini PC running cost](https://homelabtoolkit.com/tools/nas-vs-mini-pc-cost/) — total cost over the service life.
+- [Home Assistant capacity estimator](https://homelabtoolkit.com/tools/home-assistant-capacity/) — sizing if you plan to add Home Assistant.
 
 ## Notes
 
