@@ -54,6 +54,7 @@ If you are deciding what to run on this class of hardware before committing to a
 - [Mini PC home server buying guide](https://homelabtoolkit.com/build/mini-pc-home-server-buying-guide/) — ports, NICs and NVMe choices that actually matter.
 - [NAS vs mini PC running cost](https://homelabtoolkit.com/tools/nas-vs-mini-pc-cost/) — total cost over the service life.
 - [Home Assistant capacity estimator](https://homelabtoolkit.com/tools/home-assistant-capacity/) — sizing if you plan to add Home Assistant.
+- [Wake-on-LAN checklist generator](https://homelabtoolkit.com/tools/wol-checklist-generator/) — an ordered pre-deployment checklist for the verified 5/5 shutdown-WOL cycles this stack documents.
 
 ## Notes
 
