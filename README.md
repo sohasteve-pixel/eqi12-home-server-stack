@@ -55,6 +55,7 @@ If you are deciding what to run on this class of hardware before committing to a
 - [NAS vs mini PC running cost](https://homelabtoolkit.com/tools/nas-vs-mini-pc-cost/) — total cost over the service life.
 - [Home Assistant capacity estimator](https://homelabtoolkit.com/tools/home-assistant-capacity/) — sizing if you plan to add Home Assistant.
 - [Wake-on-LAN checklist generator](https://homelabtoolkit.com/tools/wol-checklist-generator/) — an ordered pre-deployment checklist for the verified 5/5 shutdown-WOL cycles this stack documents.
+- [Windows home server port audit](https://homelabtoolkit.com/build/windows-home-server-port-audit/) — every listening TCP socket and firewall rule on the host that runs this stack, measured.
 
 ## Notes
 
