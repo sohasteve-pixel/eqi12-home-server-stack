@@ -57,6 +57,7 @@ If you are deciding what to run on this class of hardware before committing to a
 - [Wake-on-LAN checklist generator](https://homelabtoolkit.com/tools/wol-checklist-generator/) — an ordered pre-deployment checklist for the verified 5/5 shutdown-WOL cycles this stack documents.
 - [Windows home server port audit](https://homelabtoolkit.com/build/windows-home-server-port-audit/) — every listening TCP socket and firewall rule on the host that runs this stack, measured.
 - [Port audit checklist generator](https://homelabtoolkit.com/tools/port-audit-checklist-generator/) — turn the audit method into an ordered checklist for your own host.
+- [Power outage recovery checklist](https://homelabtoolkit.com/tools/power-outage-recovery-checklist/) — BIOS State After G3, restart policies and a three-cycle AC-restore validation so this stack comes back unattended.
 
 ## Notes
 
