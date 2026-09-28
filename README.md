@@ -60,6 +60,7 @@ If you are deciding what to run on this class of hardware before committing to a
 - [Power outage recovery checklist](https://homelabtoolkit.com/tools/power-outage-recovery-checklist/) — BIOS State After G3, restart policies and a three-cycle AC-restore validation so this stack comes back unattended.
 - [Mini PC fan policy in BIOS](https://homelabtoolkit.com/fix/mini-pc-fan-noise-bios-policy/) — the Smart Fan stop, start and full-speed thresholds explained, and the order to tune them in when the host fan is the complaint.
 - [USB and network devices missing after sleep](https://homelabtoolkit.com/fix/usb-nic-dropout-after-sleep-mini-pc/) — selective suspend, root-hub power flags and Fast Startup, the settings that decide whether this stack's host comes back with its devices intact.
+- [Self-hosted Google Photos alternative on a mini PC](https://homelabtoolkit.com/compare/self-hosted-google-photos-alternative-mini-pc/) — sizing an Immich-class photo library on this stack's PostgreSQL + Redis + NVMe baseline, with component-level (not end-to-end) labeling.
 
 ## Notes
 
