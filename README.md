@@ -58,6 +58,8 @@ If you are deciding what to run on this class of hardware before committing to a
 - [Windows home server port audit](https://homelabtoolkit.com/build/windows-home-server-port-audit/) — every listening TCP socket and firewall rule on the host that runs this stack, measured.
 - [Port audit checklist generator](https://homelabtoolkit.com/tools/port-audit-checklist-generator/) — turn the audit method into an ordered checklist for your own host.
 - [Power outage recovery checklist](https://homelabtoolkit.com/tools/power-outage-recovery-checklist/) — BIOS State After G3, restart policies and a three-cycle AC-restore validation so this stack comes back unattended.
+- [Mini PC fan policy in BIOS](https://homelabtoolkit.com/fix/mini-pc-fan-noise-bios-policy/) — the Smart Fan stop, start and full-speed thresholds explained, and the order to tune them in when the host fan is the complaint.
+- [USB and network devices missing after sleep](https://homelabtoolkit.com/fix/usb-nic-dropout-after-sleep-mini-pc/) — selective suspend, root-hub power flags and Fast Startup, the settings that decide whether this stack's host comes back with its devices intact.
 
 ## Notes
 
