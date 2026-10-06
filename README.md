@@ -30,7 +30,7 @@ This is not a generic example. It is the stack actually running on a measured [B
 
 - **Power:** 12W idle at the wall with all services running — about $20/year at US average electricity rates. See the [home server power cost calculator](https://homelabtoolkit.com/build/home-server-power-cost-guide/) with the full measured dataset.
 - **Recovery:** verified 5/5 normal-restart cycles, 5/5 shutdown WOL cycles and 3/3 AC-loss recovery cycles. See the [Docker auto-start guide](https://homelabtoolkit.com/build/docker-desktop-auto-start-home-server/).
-- **Media:** Jellyfin with Intel Quick Sync hardware transcoding verified at ~13W for two simultaneous 4K-to-1080p streams. See the [Jellyfin Intel QSV setup guide](https://homelabtoolkit.com/build/jellyfin-intel-qsv-windows/) and the [QSV codec matrix](https://homelabtoolkit.com/lab/intel-i3-1215u-qsv-codec-support/).
+- **Media:** Jellyfin with Intel Quick Sync hardware transcoding verified at ~13W for two simultaneous 4K-to-1080p streams. See the [Jellyfin Intel QSV setup guide](https://homelabtoolkit.com/build/jellyfin-intel-qsv-windows/) and the [QSV codec matrix](https://homelabtoolkit.com/lab/intel-i3-1215u-qsv-codec-support/). Choosing a media server? See [Jellyfin vs Plex on a mini PC](https://homelabtoolkit.com/compare/jellyfin-vs-plex-mini-pc/).
 
 ## Backing the stack up
 
