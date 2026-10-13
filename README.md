@@ -65,6 +65,7 @@ If you are deciding what to run on this class of hardware before committing to a
 - [TrueNAS vs Unraid vs OpenMediaVault on a mini PC](https://homelabtoolkit.com/compare/truenas-vs-unraid-vs-omv-mini-pc/) — which NAS OS requirement list this hardware (16 GB RAM, one NVMe, USB storage paths) can actually satisfy.
 
 - [Do you need 2.5GbE for a home server?](https://homelabtoolkit.com/compare/2-5gbe-vs-gigabit-home-server/) — the measured gigabit baseline (SMB 103-107 MiB/s, small files 26-51 MiB/s) that answers the network upgrade question for this stack.
+- [Tailscale vs WireGuard vs ZeroTier on a mini PC](https://homelabtoolkit.com/compare/tailscale-vs-wireguard-vs-zerotier-mini-pc/) — the remote access decision for this stack, with free-tier terms verified October 2026 and CGNAT constraints spelled out.
 - [Self-hosting alternative selector](https://homelabtoolkit.com/tools/self-hosting-alternative-selector/) — pick a replacement for Google Photos, Plex, NAS OS, VPN or password vaults from your RAM, storage and skill level, with license costs and this repo's measured anchors.
 
 ## Notes
