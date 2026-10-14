@@ -67,6 +67,7 @@ If you are deciding what to run on this class of hardware before committing to a
 - [Do you need 2.5GbE for a home server?](https://homelabtoolkit.com/compare/2-5gbe-vs-gigabit-home-server/) — the measured gigabit baseline (SMB 103-107 MiB/s, small files 26-51 MiB/s) that answers the network upgrade question for this stack.
 - [Tailscale vs WireGuard vs ZeroTier on a mini PC](https://homelabtoolkit.com/compare/tailscale-vs-wireguard-vs-zerotier-mini-pc/) — the remote access decision for this stack, with free-tier terms verified October 2026 and CGNAT constraints spelled out.
 - [Self-hosting alternative selector](https://homelabtoolkit.com/tools/self-hosting-alternative-selector/) — pick a replacement for Google Photos, Plex, NAS OS, VPN or password vaults from your RAM, storage and skill level, with license costs and this repo's measured anchors.
+- [Self-hosted password manager on a mini PC](https://homelabtoolkit.com/compare/self-hosted-password-manager-mini-pc/) — sizing Vaultwarden (one Rust container, SQLite, HTTPS) against this stack's idle power, nginx and stability measurements, with the backup and patching reality spelled out.
 
 ## Notes
 
