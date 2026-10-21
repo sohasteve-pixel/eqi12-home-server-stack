@@ -48,6 +48,7 @@ Measured on this stack: nginx returns to healthy in 0.660 s, PostgreSQL in 0.833
 
 If you are deciding what to run on this class of hardware before committing to a stack:
 
+- [docker stats monitoring overhead test](https://homelabtoolkit.com/lab/docker-stats-monitoring-overhead-mini-pc/) — polling docker stats inflated measured idle CPU by 29.7% on the same machine; two-run comparison with raw CSVs.
 - [What 135 measurements on a \$200 mini PC actually show](https://homelabtoolkit.com/lab/mini-pc-home-server-135-measurements/) — the cross-dataset readout: power, storage, network, stability and media limits in one place.
 - [USB-C to USB-A adapter test: fast reads, slow writes](https://homelabtoolkit.com/lab/usb-c-adapter-ssd-write-penalty/) — hash-verified evidence that an adapter can pass read benchmarks while capping backup writes.
 - [Windows mini PC home server roadmap](https://homelabtoolkit.com/build/windows-mini-pc-home-server-roadmap/) — the end-to-end path from bare metal to a running server.
